@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.selesnya.upv.Javafx.CChatWindow">
+  <center>
+    <TextArea fx:id="chat" prefWidth="200.0" wrapText="true" />
+  </center>
+  <top>
+    <TextField fx:id="mensaje" onAction="#onEnter" prefWidth="200.0" />
+  </top>
+</BorderPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SelectorDeImagenes">
+   <children>
+      <AnchorPane id="ArchorPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0">
+         <children>
+            <Label layoutX="193.0" layoutY="39.0" prefHeight="28.0" prefWidth="223.0" text="Seleccione Foto de Perfil.">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="avatar1" fitHeight="120.0" fitWidth="120.0" layoutX="64.0" layoutY="86.0" onMouseClicked="#Avatar1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/avatar1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="avatar2" fitHeight="120.0" fitWidth="120.0" layoutX="200.0" layoutY="86.0" onMouseClicked="#Avatar2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/avatar2.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="avatar3" fitHeight="120.0" fitWidth="120.0" layoutX="336.0" layoutY="86.0" onMouseClicked="#Avatar3" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/avatar3.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="avatar5" fitHeight="120.0" fitWidth="120.0" layoutX="64.0" layoutY="236.0" onMouseClicked="#Avatar5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/avatar5.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="avatar6" fitHeight="120.0" fitWidth="120.0" layoutX="200.0" layoutY="236.0" onMouseClicked="#Avatar6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/avatar6.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="avatar8" fitHeight="120.0" fitWidth="120.0" layoutX="467.0" layoutY="236.0" onMouseClicked="#Avatar8" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/avatar8.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="avatar7" fitHeight="120.0" fitWidth="120.0" layoutX="336.0" layoutY="236.0" onMouseClicked="#Avatar7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/avatar7.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="avatar4" fitHeight="120.0" fitWidth="120.0" layoutX="467.0" layoutY="86.0" onMouseClicked="#Avatar4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/avatar4.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

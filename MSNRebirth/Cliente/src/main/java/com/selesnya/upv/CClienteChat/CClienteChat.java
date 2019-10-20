@@ -5,71 +5,79 @@
  */
 package com.selesnya.upv.CClienteChat;
 
-import com.selesnya.upv.Javafx.CChatWindow;
-import com.selesnya.upv.Javafx.CGetAddress;
-import com.selesnya.upv.Javafx.CGetName;
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.input.KeyCode;
-import javafx.stage.Stage;
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
  * @author telecom
  */
 public class CClienteChat {
 
-    private BufferedReader in;
-    private PrintWriter out;
-    CChatWindow chat = new CChatWindow();
+    BufferedReader in;
+    PrintWriter out;
+    JFrame frame = new JFrame("Ventana de chat");
+    JTextField tf = new JTextField(40);
+    JTextArea txtArea = new JTextArea(8, 40);
 
-    private CClienteChat() {
-        chat.main(null);
-        System.out.println(chat.getMsj());
-        out.println(chat.getMsj());
-        out.println("d");
+    public CClienteChat() {
+
+        tf.setEditable(false);
+        txtArea.setEditable(false);
+        frame.getContentPane().add(tf, "North");
+        frame.getContentPane().add(new JScrollPane(txtArea), "Center");
+        frame.pack();
+
+        tf.addActionListener(e -> {
+            out.println(tf.getText());
+            tf.setText("");
+        });
     }
 
-    private String direccionServidor() throws Exception {
-        return chat.getTextInputAdress();
+    private String direccionServidor() {
+        return JOptionPane.showInputDialog(frame, "Ingresa el nombre del servidor:", "Bienvenido al chat",
+                JOptionPane.QUESTION_MESSAGE);
     }
 
-    private void run() throws Exception {
+    private String nombre() {
+        return JOptionPane.showInputDialog(frame, "Ingresa un ID:", "Selección de ID", JOptionPane.PLAIN_MESSAGE);
+    }
+
+    private void run() throws IOException {
 
         String ds = direccionServidor();
         Socket sk = new Socket(ds, 9001);
-        in = new BufferedReader(new InputStreamReader(
-                sk.getInputStream()));
+        in = new BufferedReader(new InputStreamReader(sk.getInputStream()));
         out = new PrintWriter(sk.getOutputStream(), true);
+
         while (true) {
             String txt = in.readLine();
             if (txt.startsWith("NOMBREE")) {
-                out.println("RAUL");
+                out.println(nombre());
             } else if (txt.startsWith("NOMBREA")) {
-                chat.mensaje.setEditable(true);
+                tf.setEditable(true);
             } else if (txt.startsWith("Mensaje")) {
-                chat.chatArea.setText("HOLAAAAAAAAAAAAAAAa");
+                txtArea.append(txt.substring(8) + "\n");
             }
-            System.out.println(txt);
         }
     }
-
-    private String nombre() throws Exception {
-        return chat.getTextInputName();
-    }
-
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-        CClienteChat cliente = new CClienteChat();
-        cliente.run();
+
+        launch();
+
     }
 
 }

@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MainApp",
+            "request": "launch",
+            "mainClass": "hellofx/org.openjfx.MainApp",
+            "projectName": "hellofx"
+        }
+    ]
+}

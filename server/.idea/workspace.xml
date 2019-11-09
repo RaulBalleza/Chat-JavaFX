@@ -48,7 +48,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.16536964" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -98,6 +98,7 @@
       <workItem from="1571609135712" duration="13764000" />
       <workItem from="1571635637958" duration="6280000" />
       <workItem from="1573330999239" duration="834000" />
+      <workItem from="1573333061679" duration="183000" />
     </task>
     <task id="LOCAL-00001" summary="Version java 12">
       <created>1573331350868</created>

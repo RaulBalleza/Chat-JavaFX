@@ -1,4 +1,4 @@
-package org.openjfx.exception;
+package com.exception;
 
 /**
  * @author Dominic

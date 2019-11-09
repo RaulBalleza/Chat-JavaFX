@@ -10,14 +10,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
 
-/**
- * A Class for Rendering users images / name on the userlist.
- */
-class CellRenderer implements Callback<ListView<User>,ListCell<User>>{
-        @Override
+class CeldaUsuario implements Callback<ListView<User>, ListCell<User>> {
+    @Override
     public ListCell<User> call(ListView<User> p) {
 
-        ListCell<User> cell = new ListCell<User>(){
+        ListCell<User> cell = new ListCell<User>() {
 
             @Override
             protected void updateItem(User user, boolean bln) {
@@ -30,11 +27,11 @@ class CellRenderer implements Callback<ListView<User>,ListCell<User>>{
                     Text name = new Text(user.getName());
 
                     ImageView statusImageView = new ImageView();
-                    Image statusImage = new Image(getClass().getResource("images/" + user.getStatus().toString().toLowerCase() + ".png").toExternalForm(), 16, 16,true,true);
+                    Image statusImage = new Image(getClass().getResource("images/" + user.getStatus().toString().toLowerCase() + ".png").toExternalForm(), 16, 16, true, true);
                     statusImageView.setImage(statusImage);
 
                     ImageView pictureImageView = new ImageView();
-                    Image image = new Image(getClass().getResource("images/" + user.getPicture().toLowerCase() + ".png").toExternalForm(),50,50,true,true);
+                    Image image = new Image(getClass().getResource("images/" + user.getPicture().toLowerCase() + ".png").toExternalForm(), 50, 50, true, true);
                     pictureImageView.setImage(image);
 
                     hBox.getChildren().addAll(statusImageView, pictureImageView, name);

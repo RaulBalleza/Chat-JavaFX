@@ -26,6 +26,7 @@ public class FileLoader {
                     bis = new BufferedInputStream(fis);
                     int count = 0;
                     while (count < buffer.length) {
+                        System.out.println("ESCRIBIENDOOOOO");
                         count = bis.read(buffer, 0, buffer.length);
                         if (count > 0) {
                             out.write(buffer, 0, count);
@@ -38,7 +39,7 @@ public class FileLoader {
                     try {
                         out.close();
                         out.flush();
-                        Listener.sendFileMessage(out.toByteArray());
+                        ClienteServidor.sendFileMessage(out.toByteArray());
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -52,6 +53,5 @@ public class FileLoader {
     }
 
     public static void downloadFile(byte[] archivo) {
-        //TODO
     }
 }

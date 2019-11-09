@@ -2,7 +2,7 @@
 #connectBtn{
     -fx-color: #ffffff;
     -fx-padding: 5px 20px;
-    -fx-background-color: linear-gradient(to bottom, #ffe49e 0%,#ffb700 3%,#ffad00 35%,#ff9000 97%,#e27f00 100%);
+    -fx-background-color: linear-gradient(to bottom, #00ff00 100%, #00ff00 100%);
     -fx-font-family: 'Open Sans', sans-serif;
     -fx-font-size: 12px;
     border-radius: 3px;
@@ -19,7 +19,7 @@
     -fx-padding: 5px 20px;
     -fx-spacing: 10px;
     -fx-start-margin: 10px;
-    -fx-background-color: linear-gradient(to bottom, #ffe49e 0%,#ffb700 3%,#ffad00 35%,#ff9000 97%,#e27f00 100%);
+    -fx-background-color: linear-gradient(to bottom, #00ff00 100%, #00ff00 100%);
     -fx-font-family: 'Open Sans', sans-serif;
     -fx-cursor: hand;
 }

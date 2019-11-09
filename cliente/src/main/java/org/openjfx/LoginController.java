@@ -8,7 +8,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -46,22 +45,16 @@ public class LoginController implements Initializable {
 
     public void loginButtonAction(ActionEvent actionEvent) throws IOException {
         String hostname = hostnameTextfield.getText();
-        int port = Integer.parseInt(portTextfield.getText());
+        int port = 9001;
         String username = usernameTextfield.getText();
         String picture = selectedPicture.getText();
         FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("views/ChatView.fxml"));
         Parent window = (Pane) fmxlLoader.load();
         con = fmxlLoader.getController();
-        Listener listener = new Listener(hostname, port, username, picture, con);
+        ClienteServidor listener = new ClienteServidor(hostname, port, username, picture, con);
         Thread x = new Thread(listener);
         x.start();
         this.scene = new Scene(window);
-    }
-
-    public void closeSystem(ActionEvent actionEvent) {
-    }
-
-    public void minimizeWindow(ActionEvent actionEvent) {
     }
 
     void showScene() throws IOException {

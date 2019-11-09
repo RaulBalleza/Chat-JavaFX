@@ -21,7 +21,7 @@ public class MainApp extends Application {
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("styles/Login.css").toExternalForm());
 
-        stage.setTitle("JavaFX and Maven");
+        stage.setTitle("POO CHATFX");
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();

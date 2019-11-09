@@ -6,10 +6,8 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
-import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
-import javafx.scene.Cursor;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -48,7 +46,7 @@ public class ChatController implements Initializable {
     public void sendButtonAction() throws IOException {
         String msg = messageBox.getText();
         if (!messageBox.getText().isEmpty()) {
-            Listener.send(msg);
+            ClienteServidor.send(msg);
             messageBox.clear();
         }
     }
@@ -64,7 +62,7 @@ public class ChatController implements Initializable {
                 profileImage.setFitWidth(32);
                 BubbledLabel bl6 = new BubbledLabel();
                 if (msg.getType() == MessageType.FILE) {
-                    ImageView imageview = new ImageView(new Image(getClass().getClassLoader().getResource("images/sound.png").toString()));
+                    ImageView imageview = new ImageView(new Image(getClass().getResource("images/goku.png").toExternalForm()));
                     bl6.setGraphic(imageview);
                     bl6.setText("Envio un archivo");
                     FileLoader.downloadFile(msg.getFile());
@@ -94,7 +92,14 @@ public class ChatController implements Initializable {
                 profileImage.setFitWidth(32);
 
                 BubbledLabel bl6 = new BubbledLabel();
-                bl6.setText(msg.getMsg());
+                if (msg.getType() == MessageType.FILE) {
+                    ImageView imageview = new ImageView(new Image(getClass().getResource("images/goku.png").toExternalForm()));
+                    bl6.setGraphic(imageview);
+                    bl6.setText("Envio un archivo");
+                    FileLoader.downloadFile(msg.getFile());
+                } else {
+                    bl6.setText(msg.getName() + ": " + msg.getMsg());
+                }
                 bl6.setBackground(new Background(new BackgroundFill(Color.LIGHTGREEN,
                         null, null)));
                 HBox x = new HBox();
@@ -103,7 +108,7 @@ public class ChatController implements Initializable {
                 bl6.setBubbleSpec(BubbleSpec.FACE_RIGHT_CENTER);
                 x.getChildren().addAll(bl6, profileImage);
 
-                //setOnlineLabel(Integer.toString(msg.getOnlineCount()));
+                setOnlineLabel(Integer.toString(msg.getOnlineCount()));
                 return x;
             }
         };
@@ -139,7 +144,7 @@ public class ChatController implements Initializable {
         Platform.runLater(() -> {
             ObservableList<User> users = FXCollections.observableList(msg.getUsers());
             userList.setItems(users);
-            userList.setCellFactory(new CellRenderer());
+            userList.setCellFactory(new CeldaUsuario());
             setOnlineLabel(String.valueOf(msg.getUserlist().size()));
         });
         //logger.info("setUserList() method Exit");
@@ -173,7 +178,7 @@ public class ChatController implements Initializable {
         statusComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 try {
-                    Listener.sendStatusUpdate(Status.valueOf(newValue.toUpperCase()));
+                    ClienteServidor.sendStatusUpdate(Status.valueOf(newValue.toUpperCase()));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

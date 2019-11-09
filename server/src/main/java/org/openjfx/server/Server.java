@@ -5,8 +5,6 @@ import org.openjfx.messages.Message;
 import org.openjfx.messages.MessageType;
 import org.openjfx.messages.Status;
 import org.openjfx.messages.User;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -23,10 +21,8 @@ public class Server {
     private static final HashMap<String, User> names = new HashMap<>();
     private static HashSet<ObjectOutputStream> writers = new HashSet<>();
     private static ArrayList<User> users = new ArrayList<>();
-    static Logger logger = LoggerFactory.getLogger(Server.class);
 
     public static void main(String[] args) throws Exception {
-        logger.info("The chat server is running.");
         ServerSocket listener = new ServerSocket(PORT);
 
         try {
@@ -44,7 +40,6 @@ public class Server {
     private static class Handler extends Thread {
         private String name;
         private Socket socket;
-        private Logger logger = LoggerFactory.getLogger(Handler.class);
         private User user;
         private ObjectInputStream input;
         private OutputStream os;
@@ -56,7 +51,6 @@ public class Server {
         }
 
         public void run() {
-            logger.info("Attempting to connect a user...");
             try {
                 is = socket.getInputStream();
                 input = new ObjectInputStream(is);
@@ -71,7 +65,6 @@ public class Server {
                 while (socket.isConnected()) {
                     Message inputmsg = (Message) input.readObject();
                     if (inputmsg != null) {
-                        logger.info(inputmsg.getType() + " - " + inputmsg.getName() + ": " + inputmsg.getMsg());
                         switch (inputmsg.getType()) {
                             case USER:
                                 write(inputmsg);
@@ -89,18 +82,13 @@ public class Server {
                     }
                 }
             } catch (SocketException socketException) {
-                logger.error("Socket Exception for user " + name);
-            } catch (DuplicateUsernameException duplicateException){
-                logger.error("Duplicate Username : " + name);
             } catch (Exception e){
-                logger.error("Exception in run() method for user: " + name, e);
             } finally {
                 closeConnections();
             }
         }
 
         private Message changeStatus(Message inputmsg) throws IOException {
-            logger.debug(inputmsg.getName() + " has changed status to  " + inputmsg.getStatus());
             Message msg = new Message();
             msg.setName(user.getName());
             msg.setType(MessageType.STATUS);
@@ -112,7 +100,6 @@ public class Server {
         }
 
         private synchronized void checkDuplicateUsername(Message firstMessage) throws DuplicateUsernameException {
-            logger.info(firstMessage.getName() + " is trying to connect");
             if (!names.containsKey(firstMessage.getName())) {
                 this.name = firstMessage.getName();
                 user = new User();
@@ -123,23 +110,19 @@ public class Server {
                 users.add(user);
                 names.put(name, user);
 
-                logger.info(name + " has been added to the list");
             } else {
-                logger.error(firstMessage.getName() + " is already connected");
-                throw new DuplicateUsernameException(firstMessage.getName() + " is already connected");
+                throw new DuplicateUsernameException(firstMessage.getName() + " Ya esta conectado");
             }
         }
 
 
         private Message removeFromList() throws IOException {
-            logger.debug("removeFromList() method Enter");
             Message msg = new Message();
             msg.setMsg("has left the chat.");
             msg.setType(MessageType.DISCONNECTED);
             msg.setName("SERVER");
             msg.setUserlist(names);
             write(msg);
-            logger.debug("removeFromList() method Exit");
             return msg;
         }
 
@@ -172,19 +155,14 @@ public class Server {
          * Once a user has been disconnected, we close the open connections and remove the writers
          */
         private synchronized void closeConnections()  {
-            logger.debug("closeConnections() method Enter");
-            logger.info("HashMap names:" + names.size() + " writers:" + writers.size() + " usersList size:" + users.size());
             if (name != null) {
                 names.remove(name);
-                logger.info("User: " + name + " has been removed!");
             }
             if (user != null){
                 users.remove(user);
-                logger.info("User object: " + user + " has been removed!");
             }
             if (output != null){
                 writers.remove(output);
-                logger.info("Writer object: " + user + " has been removed!");
             }
             if (is != null){
                 try {
@@ -212,8 +190,6 @@ public class Server {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            logger.info("HashMap names:" + names.size() + " writers:" + writers.size() + " usersList size:" + users.size());
-            logger.debug("closeConnections() method Exit");
         }
     }
 }

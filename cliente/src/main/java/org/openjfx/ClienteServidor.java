@@ -9,7 +9,7 @@ import java.net.Socket;
 
 import static org.openjfx.messages.MessageType.CONNECTED;
 
-class Listener implements Runnable {
+class ClienteServidor implements Runnable {
     private Socket socket;
     public String hostname;
     public int port;
@@ -22,11 +22,11 @@ class Listener implements Runnable {
     private OutputStream outputStream;
     private static final String HASCONNECTED = "has connected";
 
-    public Listener(String hostname, int port, String username, String picture, ChatController controller) {
+    public ClienteServidor(String hostname, int port, String username, String picture, ChatController controller) {
         this.hostname = hostname;
         this.port = port;
-        Listener.username = username;
-        Listener.picture = picture;
+        ClienteServidor.username = username;
+        ClienteServidor.picture = picture;
         this.controller = controller;
     }
 
@@ -54,18 +54,15 @@ class Listener implements Runnable {
             System.out.println("Conexiones hechas");
         } catch (IOException e) {
             System.err.println("No se ah podido conectar al servidor");
-            /*logger.error("Could not Connect");*/
         }
 
         try {
             connect();
-            //logger.info("Sockets in and out ready!");
             while (socket.isConnected()) {
                 Message message = null;
                 message = (Message) input.readObject();
 
                 if (message != null) {
-                    //logger.debug("Message recieved:" + message.getMsg() + " MessageType:" + message.getType() + "Name:" + message.getName());
                     switch (message.getType()) {
                         case USER:
                             controller.addToChat(message);

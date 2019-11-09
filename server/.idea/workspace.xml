@@ -2,119 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="925a1f8e-8b08-4f07-94d1-fc6a3d25f794" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/libraries/Maven__org_openjfx_javafx_base_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/libraries/Maven__org_openjfx_javafx_base_win_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/libraries/Maven__org_openjfx_javafx_controls_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/libraries/Maven__org_openjfx_javafx_controls_win_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/libraries/Maven__org_openjfx_javafx_fxml_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/libraries/Maven__org_openjfx_javafx_graphics_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/libraries/Maven__org_openjfx_javafx_media_13_ea_14b.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/libraries/Maven__org_openjfx_javafx_media_win_13_ea_14b.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/images/ChatView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/images/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/server.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/openjfx/server/Server$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/hellofx.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/hellofx.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/java/org/openjfx/CellRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/src/main/java/org/openjfx/CeldaUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/java/org/openjfx/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/src/main/java/org/openjfx/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/java/org/openjfx/FileLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/src/main/java/org/openjfx/FileLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/java/org/openjfx/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/src/main/java/org/openjfx/ClienteServidor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/java/org/openjfx/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/src/main/java/org/openjfx/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/java/org/openjfx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/src/main/java/org/openjfx/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/images/dominic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/images/error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/images/fxchat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/images/line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/images/microphone-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/images/microphone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/images/plug.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/images/sarah.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/images/settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/images/sound.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/sounds/notification.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/styles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/styles/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/views/ChatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/views/ChatView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/views/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/views/LoginView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/src/main/resources/org/openjfx/views/TrayNotification.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/CellRenderer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/CellRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/ChatController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/ChatController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/ChatController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/ChatController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/ChatController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/ChatController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/ChatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/FileLoader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/FileLoader$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/FileLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/FileLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/Listener$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/LoginController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/LoginController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/images/dominic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/images/error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/images/fxchat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/images/line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/images/microphone-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/images/microphone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/images/plug.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/images/sarah.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/images/settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/images/sound.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/MessageType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/MessageType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/Bubble$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/Bubble$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/Bubble.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/Bubble.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/BubbleSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/BubbleSpec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/BubbledLabel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/BubbledLabel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/BubbledLabel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/BubbledLabel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/BubbledLabel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/BubbledLabel$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/BubbledLabel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/BubbledLabel$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/BubbledLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/messages/bubble/BubbledLabel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/sounds/notification.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/styles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/styles/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/views/ChatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/views/ChatView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/views/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/views/LoginView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cliente/target/classes/org/openjfx/views/TrayNotification.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_5_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_5_6.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/exception/DuplicateUsernameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/exception/DuplicateUsernameException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/messages/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/messages/MessageType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/messages/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/messages/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/messages/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/messages/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/exception/DuplicateUsernameException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/exception/DuplicateUsernameException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/messages/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/messages/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/messages/MessageType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/messages/MessageType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/messages/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/messages/Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/messages/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/messages/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/server/Server$Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/server/Server$Handler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/server.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/exception/DuplicateUsernameException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/messages/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/messages/MessageType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/messages/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/messages/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/server/Server$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/server/Server$Handler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/server/Server.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,11 +68,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cliente" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.16536964" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -209,6 +118,7 @@
       <updated>1571609127923</updated>
       <workItem from="1571609135712" duration="13764000" />
       <workItem from="1571635637958" duration="6280000" />
+      <workItem from="1573330999239" duration="250000" />
     </task>
     <servers />
   </component>
@@ -220,7 +130,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

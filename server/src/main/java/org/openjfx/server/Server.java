@@ -72,6 +72,9 @@ public class Server {
                             case FILE:
                                 write(inputmsg);
                                 break;
+                            case IMAGE:
+                                write(inputmsg);
+                                break;
                             case CONNECTED:
                                 addToList();
                                 break;

@@ -70,6 +70,9 @@ class ClienteServidor implements Runnable {
                         case FILE:
                             controller.addToChat(message);
                             break;
+                        case IMAGE:
+                            controller.addToChat(message);
+                            break;
                         case CONNECTED:
                             controller.setUserList(message);
                             break;
@@ -108,10 +111,23 @@ class ClienteServidor implements Runnable {
         oos.flush();
     }
 
-    public static void sendFileMessage(byte[] file) throws IOException {
+    public static void sendFileMessage(byte[] file, String filename) throws IOException {
         Message createMessage = new Message();
         createMessage.setName(username);
+        createMessage.setFilename(filename);
         createMessage.setType(MessageType.FILE);
+        createMessage.setStatus(Status.AWAY);
+        createMessage.setFile(file);
+        createMessage.setPicture(picture);
+        oos.writeObject(createMessage);
+        oos.flush();
+    }
+
+    public static void sendImageMessage(byte[] file, String filename) throws IOException {
+        Message createMessage = new Message();
+        createMessage.setName(username);
+        createMessage.setFilename(filename);
+        createMessage.setType(MessageType.IMAGE);
         createMessage.setStatus(Status.AWAY);
         createMessage.setFile(file);
         createMessage.setPicture(picture);

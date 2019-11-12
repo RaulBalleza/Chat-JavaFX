@@ -29,9 +29,9 @@ import org.openjfx.messages.User;
 import org.openjfx.messages.bubble.BubbleSpec;
 import org.openjfx.messages.bubble.BubbledLabel;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
+import java.nio.file.Files;
 import java.util.ResourceBundle;
 
 public class ChatController implements Initializable {
@@ -52,6 +52,8 @@ public class ChatController implements Initializable {
     }
 
     synchronized void addToChat(Message msg) {
+        System.out.println("TIPO DE MENSAJE RECIBIDO:"+msg.getType());
+
         Task<HBox> othersMessages = new Task<HBox>() {
             @Override
             public HBox call() throws Exception {
@@ -62,11 +64,19 @@ public class ChatController implements Initializable {
                 profileImage.setFitWidth(32);
                 BubbledLabel bl6 = new BubbledLabel();
                 if (msg.getType() == MessageType.FILE) {
-                    ImageView imageview = new ImageView(new Image(getClass().getResource("images/goku.png").toExternalForm()));
+                    System.out.println("ARCHIVO, PADRE");
+                }
+                if (msg.getType() == MessageType.IMAGE) {
+                    System.out.println("TIPO, IMAGEN");
+                    ImageView imageview = new ImageView(new Image(new ByteArrayInputStream(msg.getFile())));
+                    imageview.setFitHeight(100);
+                    imageview.setFitWidth(100);
+                    //ImageView imageview = new ImageView(imagen);
                     bl6.setGraphic(imageview);
-                    bl6.setText("Envio un archivo");
+                    //bl6.setText("Envio un archivo");
                     FileLoader.downloadFile(msg.getFile());
-                } else {
+                }
+                if (msg.getType() != MessageType.FILE && msg.getType() != MessageType.IMAGE) {
                     bl6.setText(msg.getName() + ": " + msg.getMsg());
                 }
                 bl6.setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));
@@ -93,11 +103,29 @@ public class ChatController implements Initializable {
 
                 BubbledLabel bl6 = new BubbledLabel();
                 if (msg.getType() == MessageType.FILE) {
-                    ImageView imageview = new ImageView(new Image(getClass().getResource("images/goku.png").toExternalForm()));
+                    System.out.println("TIPO, IMAGEN");
+                    ImageView imageview = new ImageView(new Image(getClass().getResource("images/file.png").toExternalForm()));                    imageview.setFitHeight(100);
+                    imageview.setFitHeight(100);
+                    imageview.setFitWidth(100);
+                    //ImageView imageview = new ImageView(imagen);
                     bl6.setGraphic(imageview);
-                    bl6.setText("Envio un archivo");
+                    //bl6.setText("Envio un archivo");
+                    FileOutputStream out = new FileOutputStream("prueba"+msg.getFilename());
+                    out.write(msg.getFile());
+                    out.close();
+                    //FileLoader.downloadFile(msg.getFile());
+                }
+                if (msg.getType() == MessageType.IMAGE) {
+                    System.out.println("TIPO, IMAGEN");
+                    ImageView imageview = new ImageView(new Image(new ByteArrayInputStream(msg.getFile())));
+                    imageview.setFitHeight(100);
+                    imageview.setFitWidth(100);
+                    //ImageView imageview = new ImageView(imagen);
+                    bl6.setGraphic(imageview);
+                    //bl6.setText("Envio un archivo");
                     FileLoader.downloadFile(msg.getFile());
-                } else {
+                }
+                if (msg.getType() != MessageType.FILE && msg.getType() != MessageType.IMAGE) {
                     bl6.setText(msg.getName() + ": " + msg.getMsg());
                 }
                 bl6.setBackground(new Background(new BackgroundFill(Color.LIGHTGREEN,
@@ -187,8 +215,9 @@ public class ChatController implements Initializable {
 
     }
 
-    public void openFileChooser(MouseEvent mouseEvent) {
+    public void openFileChooser() throws IOException {
         FileChooser fileChooser = new FileChooser();
+        fileChooser.setInitialDirectory(new File("."));
         File file = fileChooser.showOpenDialog(null);
         FileLoader.loadFile(file);
     }

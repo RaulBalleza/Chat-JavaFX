@@ -7,5 +7,5 @@ package org.openjfx.messages;
  * Github: www.github.com/DomHeal
  */
 public enum MessageType {
-    DISCONNECTED, CONNECTED, STATUS, USER, FILE;
+    DISCONNECTED, CONNECTED, STATUS, USER, FILE, IMAGE;
 }

@@ -12,6 +12,7 @@ public class Message implements Serializable {
     private int count;
     private ArrayList<User> list;
     private ArrayList<User> users;
+    private String filename;
 
     private Status status;
 
@@ -94,5 +95,13 @@ public class Message implements Serializable {
 
     public void setFile(byte[] file) {
         this.file = file;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
 }

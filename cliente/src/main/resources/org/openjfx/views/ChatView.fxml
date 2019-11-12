@@ -28,9 +28,10 @@
                 </ScrollPane>
                 <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="100.0" VBox.vgrow="NEVER">
                     <children>
-                        <TextArea fx:id="messageBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="100.0" onKeyPressed="#sendMethod" prefHeight="16.0" prefWidth="698.0" promptText="Escrbibe un mensaje..." HBox.hgrow="ALWAYS">
+                        <TextArea fx:id="messageBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="100.0" onKeyPressed="#sendMethod" prefHeight="43.0" prefWidth="272.0" promptText="Escrbibe un mensaje..." HBox.hgrow="ALWAYS">
 
                         </TextArea>
+                  <Button mnemonicParsing="false" onAction="#openFileChooser" text="Button" />
                         <Button fx:id="buttonSend" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sendButtonAction" prefHeight="43.0" prefWidth="140.0" text="Enviar" textAlignment="CENTER" HBox.hgrow="NEVER" />
                         
                     </children>

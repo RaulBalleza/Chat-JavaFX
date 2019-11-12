@@ -13,7 +13,6 @@ import javafx.util.Callback;
 class CeldaUsuario implements Callback<ListView<User>, ListCell<User>> {
     @Override
     public ListCell<User> call(ListView<User> p) {
-
         ListCell<User> cell = new ListCell<User>() {
 
             @Override

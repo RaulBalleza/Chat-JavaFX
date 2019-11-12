@@ -39,7 +39,12 @@ public class FileLoader {
                     try {
                         out.close();
                         out.flush();
-                        ClienteServidor.sendFileMessage(out.toByteArray());
+                        if (archivo.getName().endsWith(".png")) {
+                            ClienteServidor.sendImageMessage(out.toByteArray(), archivo.getName());
+                            System.out.println("ES UNA IMAGEN ENVIADA");
+                        } else {
+                            ClienteServidor.sendFileMessage(out.toByteArray(), archivo.getName());
+                        }
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

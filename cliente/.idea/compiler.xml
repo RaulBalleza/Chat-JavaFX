@@ -10,7 +10,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="13">
+<<<<<<< HEAD
       <module name="hellofx" target="12" />
+=======
+      <module name="hellofx" target="13" />
+>>>>>>> 7b2570d6569256d38a4fd94c151ae5693374bb4d
     </bytecodeTargetLevel>
   </component>
 </project>

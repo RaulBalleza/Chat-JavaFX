@@ -6,6 +6,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.ComboBox;
@@ -21,6 +22,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import org.openjfx.messages.Message;
 import org.openjfx.messages.MessageType;
@@ -43,7 +45,7 @@ public class ChatController implements Initializable {
     public ListView userList;
     public Label onlineCountLabel;
     public ComboBox statusComboBox;
-
+    String directorio=".";
     public void sendButtonAction() throws IOException {
         String msg = messageBox.getText();
         if (!messageBox.getText().isEmpty()) {
@@ -73,7 +75,8 @@ public class ChatController implements Initializable {
                     //ImageView imageview = new ImageView(imagen);
                     bl6.setGraphic(imageview);
                     bl6.setText(msg.getFilename());
-                    FileOutputStream out = new FileOutputStream("Chat_JavaFX_"+msg.getFilename()+"_"+fecha.toString());
+
+                    FileOutputStream out = new FileOutputStream(directorio+"/"+"Chat_JavaFX_"+msg.getFilename()+"_"+fecha.toString());
                     out.write(msg.getFile());
                     out.close();
                 }
@@ -89,6 +92,9 @@ public class ChatController implements Initializable {
                     bl6.setGraphic(imageview);
                     bl6.setText(msg.getFilename());
                     FileLoader.downloadFile(msg.getFile());
+                    FileOutputStream out = new FileOutputStream(directorio+"/"+"Chat_JavaFX_"+msg.getFilename()+"_"+fecha.toString());
+                    out.write(msg.getFile());
+                    out.close();
                 }
                 if (msg.getType() != MessageType.FILE && msg.getType() != MessageType.IMAGE) {
                     bl6.setText(msg.getName() + ": " + msg.getMsg());
@@ -124,7 +130,7 @@ public class ChatController implements Initializable {
                     //ImageView imageview = new ImageView(imagen);
                     bl6.setGraphic(imageview);
                     bl6.setText(msg.getFilename());
-                    FileOutputStream out = new FileOutputStream("Chat_JavaFX_"+msg.getFilename()+"_"+fecha.toString());
+                    FileOutputStream out = new FileOutputStream(directorio+"/"+"Chat_JavaFX_"+msg.getFilename()+"_"+fecha.toString());
                     out.write(msg.getFile());
                     out.close();
                     //FileLoader.downloadFile(msg.getFile());
@@ -144,6 +150,9 @@ public class ChatController implements Initializable {
                     bl6.setGraphic(imageview);
                     bl6.setText(msg.getFilename());
                     FileLoader.downloadFile(msg.getFile());
+                    FileOutputStream out = new FileOutputStream(directorio+"/"+"Chat_JavaFX_"+msg.getFilename()+"_"+fecha.toString());
+                    out.write(msg.getFile());
+                    out.close();
                 }
                 if (msg.getType() != MessageType.FILE && msg.getType() != MessageType.IMAGE) {
                     bl6.setText(msg.getName() + ": " + msg.getMsg());
@@ -240,5 +249,16 @@ public class ChatController implements Initializable {
         fileChooser.setInitialDirectory(new File("."));
         File file = fileChooser.showOpenDialog(null);
         FileLoader.loadFile(file);
+    }
+
+    public void openDirectoryChooser(ActionEvent actionEvent) {
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        File selectedDirectory = directoryChooser.showDialog(null);
+
+        if(selectedDirectory == null){
+            //No Directory selected
+        }else{
+            directorio = selectedDirectory.getAbsolutePath();
+        }
     }
 }

@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import java.lang.String?>
+<?import javafx.collections.*?>
 <?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 
-<BorderPane fx:id="borderPane" maxWidth="615.0" minWidth="350.0" prefHeight="254.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.LoginController">
-   <right>
+<BorderPane fx:id="borderPane" maxWidth="615.0" minWidth="350.0" prefHeight="254.0" prefWidth="413.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="org.openjfx.LoginController">
+  <right>
     <GridPane prefHeight="420.0" prefWidth="1005.0" BorderPane.alignment="CENTER">
       <children>
         <Button id="connectBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#loginButtonAction" text="Conectar" GridPane.columnIndex="1" GridPane.rowIndex="4" />
@@ -27,12 +32,12 @@
           <children>
             <ImageView fx:id="BadBunnyview" fitHeight="93.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" visible="false">
               <image>
-                <Image preserveRatio="false" smooth="false" url="@../images/badbunny.png" />
+                <Image url="@../images/badbunny.png" preserveRatio="false" smooth="false" />
               </image>
             </ImageView>
             <ImageView fx:id="Gokuview" fitHeight="93.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" visible="false">
               <image>
-                <Image preserveRatio="false" smooth="true" url="@../images/goku.png" />
+                <Image url="@../images/goku.png" preserveRatio="false" smooth="true" />
               </image>
             </ImageView>
             <ImageView fx:id="Defaultview" fitHeight="93.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
@@ -52,7 +57,7 @@
           </items>
         </ChoiceBox>
         <Label fx:id="selectedPicture" text="Label" GridPane.rowIndex="1" />
-            <Label text="Avatar:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Label text="Avatar:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
       </children>
       <columnConstraints>
         <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="325.0" minWidth="3.0" prefWidth="104.0" />
@@ -68,5 +73,5 @@
         <RowConstraints maxHeight="96.0" minHeight="2.0" prefHeight="16.0" vgrow="SOMETIMES" />
       </rowConstraints>
     </GridPane>
-   </right>
+  </right>
 </BorderPane>
